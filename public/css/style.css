@@ -23,9 +23,9 @@ body{
   overflow-x: hidden;
 }
 
-#pad{
+#pad, #keyboard{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(12, 1fr);
   margin: 20px;
 }
 
@@ -55,8 +55,8 @@ p, label{
 }
 
 a{ 
-  min-height: 30px;
-  min-width: 30px;
+  min-height: 40px;
+  min-width: 40px;
   color: #ff5825; 
   border: 1px solid#ff5825;; 
   border-radius: 5px;
