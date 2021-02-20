@@ -98,6 +98,88 @@ a.key.minor{
   left: -10px */
 }
 
-/******************************************
-/* MEDIA QUERIES
-/*******************************************/
+@keyframes scaleUp {
+  0% {
+    transform: scale(1, 1);
+ }
+  50% {
+    transform: scale(1.2, 1.2);
+ }
+  100% {
+    transform: scale(1, 1);
+ }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1, 1);
+ }
+  50% {
+    transform: scale(0.8, 0.8);
+ }
+  100% {
+    transform: scale(1, 1);
+ }
+}
+body, html {
+  background: black;
+  background-blend-mode: screen;
+  color: white;
+  font-size: 14px;
+  height: 100%;
+}
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+#remote {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  width: 860px;
+  margin: 0 auto;
+}
+#remote button {
+  margin-right: 20px;
+}
+#remote #step-count {
+  margin-left: auto;
+}
+#app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+#app-wrapper section {
+  min-width: 872px;
+}
+#app-wrapper input[type="checkbox"] {
+  -webkit-appearance: initial;
+  appearance: initial;
+  outline: none;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: rgba(255, 255, 255, .3);
+  position: relative;
+  border-radius: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+#app-wrapper input[type="checkbox"]:nth-child(4n+1) {
+  margin-left: 6px;
+}
+#app-wrapper input[type="checkbox"]:checked, #app-wrapper input[type="checkbox"]:hover {
+  background: var(--blue);;
+  animation-name: scaleDown;
+  animation-duration: 0.15s;
+}
+#app-wrapper input[type="checkbox"]:checked.active, #app-wrapper input[type="checkbox"]:hover.active {
+  background: var(--reddish);;
+  animation-name: scaleUp;
+  animation-duration: 0.15s;
+}

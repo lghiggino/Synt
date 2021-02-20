@@ -1,4 +1,5 @@
 const synth = new Tone.PolySynth(Tone.Synth).toDestination();
+synth.volume.value = 0;
 const keys = document.querySelectorAll(".key")
 
 keys.forEach(key => {

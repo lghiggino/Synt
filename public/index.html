@@ -9,50 +9,336 @@
 </head>
 <body>
     <main>
-        
-
-        <section id="keyboard">
-            <span>c </span>
-            <span>c# </span>
-            <span>d </span>
-            <span>d# </span>
-            <span>e </span>
-            <span>f </span>
-            <span>f# </span>
-            <span>g </span>
-            <span>g# </span>
-            <span>a </span>
-            <span>a# </span>
-            <span>b </span>
-            <a id="c3" class="key major">q</a>
-            <a id="c#3" class="key minor">w</a>
-            <a id="d3" class="key major">e</a>
-            <a id="d#3" class="key minor">r</a>
-            <a id="e3" class="key major">t</a>
-            <a id="f3" class="key major">y</a>
-            <a id="f#3" class="key minor">u</a>
-            <a id="g3" class="key major">i</a>
-            <a id="g#3" class="key minor">o</a>
-            <a id="a3" class="key major">p</a>
-            <a id="a#3" class="key minor">'</a>
-            <a id="b3" class="key major">[</a>
-            <a id="c4" class="key major">a</a>
-            <a id="c#4" class="key minor">s</a>
-            <a id="d4" class="key major">d</a>
-            <a id="d#4" class="key minor">f</a>
-            <a id="e4" class="key major">g</a>
-            <a id="f4" class="key major">h</a>
-            <a id="f#4" class="key minor">j</a>
-            <a id="g4" class="key major">k</a>
-            <a id="g#4" class="key minor">l</a>
-            <a id="a4" class="key major">ç</a>
-            <a id="a#4" class="key minor">~</a>
-            <a id="b4" class="key major">]</a>
+        <!-- sequencer -->
+        <div id="app">
+            <div id="remote">
+              <button id="play">Play</button>
+              <button id="reset">Reset</button>
+              <input type="number" min="60" max="200" id="tempo" value="88" /> bpm
+              <span id="step-count">Measure: 0 / 8</span>
+            </div>
+            <div id="app-wrapper">
+              <section>
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+              </section>
+              <section>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+              </section>
+              <section>
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+              </section>
+              <section>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+              </section>
+              <section>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" checked />
+                <input type="checkbox" checked />
+              </section>
+              <section>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+              </section>
+              <section>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+              </section>
+                <section>
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+                <input type="checkbox" />
+              </section>
+            </div>
+            
+            <!-- keyboard -->
+            <section id="keyboard">
+                <span>c </span>
+                <span>c# </span>
+                <span>d </span>
+                <span>d# </span>
+                <span>e </span>
+                <span>f </span>
+                <span>f# </span>
+                <span>g </span>
+                <span>g# </span>
+                <span>a </span>
+                <span>a# </span>
+                <span>b </span>
+                <a id="c3" class="key major">q</a>
+                <a id="c#3" class="key minor">w</a>
+                <a id="d3" class="key major">e</a>
+                <a id="d#3" class="key minor">r</a>
+                <a id="e3" class="key major">t</a>
+                <a id="f3" class="key major">y</a>
+                <a id="f#3" class="key minor">u</a>
+                <a id="g3" class="key major">i</a>
+                <a id="g#3" class="key minor">o</a>
+                <a id="a3" class="key major">p</a>
+                <a id="a#3" class="key minor">'</a>
+                <a id="b3" class="key major">[</a>
+                <a id="c4" class="key major">a</a>
+                <a id="c#4" class="key minor">s</a>
+                <a id="d4" class="key major">d</a>
+                <a id="d#4" class="key minor">f</a>
+                <a id="e4" class="key major">g</a>
+                <a id="f4" class="key major">h</a>
+                <a id="f#4" class="key minor">j</a>
+                <a id="g4" class="key major">k</a>
+                <a id="g#4" class="key minor">l</a>
+                <a id="a4" class="key major">ç</a>
+                <a id="a#4" class="key minor">~</a>
+                <a id="b4" class="key major">]</a>
+            </section>
+            
         </section>
+        
     </main>
     
     <script src="./node_modules/tone/build/Tone.js"></script>
-    <script src="./javascript/index.js"></script>
+    <script src="./javascript/sequencer.js"></script>
+    <script src="./javascript/keyboard.js"></script>
     <script src="./javascript/app.js"></script>
 </body>
 </html>
