@@ -161,17 +161,17 @@ body, html {
   -webkit-appearance: initial;
   appearance: initial;
   outline: none;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: none;
   background: rgba(255, 255, 255, .3);
   position: relative;
-  border-radius: 100%;
-  margin: 0;
+  /* border-radius: 100%; */
+  margin: 2px;
   cursor: pointer;
 }
 #app-wrapper input[type="checkbox"]:nth-child(4n+1) {
-  margin-left: 6px;
+  margin-left: 12px;
 }
 #app-wrapper input[type="checkbox"]:checked, #app-wrapper input[type="checkbox"]:hover {
   background: var(--blue);;

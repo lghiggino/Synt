@@ -4,7 +4,7 @@ const keys = document.querySelectorAll(".key")
 
 keys.forEach(key => {
     key.addEventListener("click", (e)=> {
-        synth.triggerAttackRelease(e.target.id, "0.5an");
+        synth.triggerAttackRelease(e.target.id, "8n");
     })
 })
 
@@ -36,7 +36,7 @@ const keyboardMap = {
 }
 
 window.addEventListener("keydown", (e) => {
-    synth.triggerAttackRelease(keyboardMap[e.code], "0.5an")
+    synth.triggerAttackRelease(keyboardMap[e.code], "8n")
 })
 
 

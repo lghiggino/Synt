@@ -27,11 +27,11 @@ gain.toDestination();
 const notes = ['e0', 'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7'];
 let index = 0;
 
-Tone.Transport.bpm.value = this.value || 88;
+Tone.Transport.bpm.value = this.value || 90;
 Tone.Transport.scheduleRepeat(repeat, '16n');
   
 tempo.onchange = function() {
-  Tone.Transport.bpm.value = this.value || 88;
+  Tone.Transport.bpm.value = this.value || 90;
 };
 
 playBtn.onclick = () => {
