@@ -1,10 +1,9 @@
-const synth = new Tone.Synth().toDestination();
+const synth = new Tone.PolySynth(Tone.Synth).toDestination();
 const keys = document.querySelectorAll(".key")
 
 keys.forEach(key => {
     key.addEventListener("click", (e)=> {
-        console.log(e.target.id)
-        synth.triggerAttackRelease(e.target.id, "4an");
+        synth.triggerAttackRelease(e.target.id, "0.5an");
     })
 })
 
@@ -36,8 +35,9 @@ const keyboardMap = {
 }
 
 window.addEventListener("keydown", (e) => {
-    synth.triggerAttackRelease(keyboardMap[e.code], "16an")
+    synth.triggerAttackRelease(keyboardMap[e.code], "0.5an")
 })
+
 
 // const now = Tone.now()
 // // trigger the attack immediately
