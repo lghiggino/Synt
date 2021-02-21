@@ -33,9 +33,22 @@ const keyboardMap = {
     "Semicolon":"a4" ,
     "Quote":"a#4",
     "Backslash":"b4" ,
+    "IntlBackslash":"c5" ,
+    "KeyZ":"c#5",
+    "KeyX":"d5" ,
+    "KeyC":"d#5",
+    "KeyV":"e5" ,
+    "KeyB":"f5" ,
+    "KeyN":"f#5",
+    "KeyM":"g5" ,
+    "Comma":"g#5",
+    "Period":"a5" ,
+    "Slash":"a#5",
+    "ShiftRight":"b5" ,
 }
 
 window.addEventListener("keydown", (e) => {
+    //console.log(e.code)
     synth.triggerAttackRelease(keyboardMap[e.code], "8n")
     //on key press classlist toggle active
 })
