@@ -1,7 +1,7 @@
 const playBtn = document.getElementById('play');
 const resetBtn = document.getElementById('reset');
 const stepCount = document.getElementById('step-count');
-const instruments = document.body.querySelectorAll('#app-wrapper > section');
+const instruments = document.body.querySelectorAll('#app-wrapper > section > div');
 const tempo = document.getElementById('tempo');
 
 const drumKit = new Tone.Sampler({

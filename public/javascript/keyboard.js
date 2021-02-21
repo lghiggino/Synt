@@ -37,7 +37,9 @@ const keyboardMap = {
 
 window.addEventListener("keydown", (e) => {
     synth.triggerAttackRelease(keyboardMap[e.code], "8n")
+    //on key press classlist toggle active
 })
+
 
 
 // const now = Tone.now()
