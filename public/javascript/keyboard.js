@@ -4,54 +4,56 @@ const keys = document.querySelectorAll(".key")
 
 keys.forEach(key => {
     key.addEventListener("click", (e)=> {
-        synth.triggerAttackRelease(e.target.id, "8n");
+        synth.triggerAttackRelease(e.target.id, "4n");
     })
 })
 
 const keyboardMap = {
-    "KeyQ":"c3" ,
-    "KeyW":"c#3",
-    "KeyE":"d3" ,
-    "KeyR":"d#3",
-    "KeyT":"e3" ,
-    "KeyY":"f3" ,
-    "KeyU":"f#3",
-    "KeyI":"g3" ,
-    "KeyO":"g#3",
-    "KeyP":"a3" ,
-    "BracketLeft":"a#3",
-    "BracketRight":"b3" ,
-    "KeyA":"c4" ,
-    "KeyS":"c#4",
-    "KeyD":"d4" ,
-    "KeyF":"d#4",
-    "KeyG":"e4" ,
-    "KeyH":"f4" ,
-    "KeyJ":"f#4",
-    "KeyK":"g4" ,
-    "KeyL":"g#4",
-    "Semicolon":"a4" ,
-    "Quote":"a#4",
-    "Backslash":"b4" ,
-    "IntlBackslash":"c5" ,
-    "KeyZ":"c#5",
-    "KeyX":"d5" ,
-    "KeyC":"d#5",
-    "KeyV":"e5" ,
-    "KeyB":"f5" ,
-    "KeyN":"f#5",
-    "KeyM":"g5" ,
-    "Comma":"g#5",
-    "Period":"a5" ,
-    "Slash":"a#5",
-    "ShiftRight":"b5" ,
+    "KeyQ": "c3",
+    "Digit2": "c#3",
+    "KeyW": "d3",
+    "Digit3": "d#3",
+    "KeyE": "e3",
+    "KeyR": "f3",
+    "Digit5": "f#3",
+    "KeyT": "g3",
+    "Digit6": "g#3",
+    "KeyY": "a3",
+    "Digit7": "a#3",
+    "KeyU": "b3",
+    "KeyZ": "c4",
+    "KeyS": "c#4",
+    "KeyX": "d4", 
+    "KeyD":"d#4",
+    "KeyC":"e4",
+    "KeyV":"f4",
+    "KeyG":"f#4",
+    "KeyB":"g4",
+    "KeyH":"g#4",
+    "KeyN":"a4",
+    "KeyJ":"a#4",
+    "KeyM":"b4",
 }
 
 window.addEventListener("keydown", (e) => {
-    //console.log(e.code)
-    synth.triggerAttackRelease(keyboardMap[e.code], "8n")
-    //on key press classlist toggle active
+    if (!keyboardMap[e.code]){
+        return
+    }else{
+        synth.triggerAttackRelease(keyboardMap[e.code], "4n")
+        //on key press classlist toggle active
+        const key = document.getElementById(`${keyboardMap[e.code]}`)
+        key.classList.add("playing")
+    }
 })
+
+keys.forEach(key => {
+    key.addEventListener("transitionend", removeTransition)
+})
+
+function removeTransition(e){
+    if (e.propertyName !== "box-shadow") return
+    this.classList.remove("playing");
+}
 
 
 

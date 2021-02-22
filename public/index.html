@@ -321,63 +321,43 @@
                 <input type="checkbox" />
                 </div>
               </section>
-
             </div>
-            
-            <!-- keyboard -->
-            <section id="keyboard">
-              <span>c </span>
-              <span>c# </span>
-              <span>d </span>
-              <span>d# </span>
-              <span>e </span>
-              <span>f </span>
-              <span>f# </span>
-              <span>g </span>
-              <span>g# </span>
-              <span>a </span>
-              <span>a# </span>
-              <span>b </span>
-              <a id="c3" class="key major">q</a>
-              <a id="c#3" class="key minor">w</a>
-              <a id="d3" class="key major">e</a>
-              <a id="d#3" class="key minor">r</a>
-              <a id="e3" class="key major shift-left">t</a>
-              <a id="f3" class="key major shift-left">y</a>
-              <a id="f#3" class="key minor">u</a>
-              <a id="g3" class="key major">i</a>
-              <a id="g#3" class="key minor">o</a>
-              <a id="a3" class="key major">p</a>
-              <a id="a#3" class="key minor">'</a>
-              <a id="b3" class="key major">[</a>
-              <a id="c4" class="key major">a</a>
-              <a id="c#4" class="key minor">s</a>
-              <a id="d4" class="key major">d</a>
-              <a id="d#4" class="key minor">f</a>
-              <a id="e4" class="key major">g</a>
-              <a id="f4" class="key major">h</a>
-              <a id="f#4" class="key minor">j</a>
-              <a id="g4" class="key major">k</a>
-              <a id="g#4" class="key minor">l</a>
-              <a id="a4" class="key major">ç</a>
-              <a id="a#4" class="key minor">~</a>
-              <a id="b4" class="key major">]</a>
-              <a id="c5" class="key major">\</a>
-              <a id="c#5" class="key minor">z</a>
-              <a id="d5" class="key major">x</a>
-              <a id="d#5" class="key minor">c</a>
-              <a id="e5" class="key major">v</a>
-              <a id="f5" class="key major">b</a>
-              <a id="f#5" class="key minor">n</a>
-              <a id="g5" class="key major">m</a>
-              <a id="g#5" class="key minor">,</a>
-              <a id="a5" class="key major">.</a>
-              <a id="a#5" class="key minor">;</a>
-              <a id="b5" class="key major">R-shift</a>
-          </section>
-            
+
         </section>
         
+        <section id="effects">
+          <label for="distortion">Distortion</label>
+          <input type="range" id="distortion-effect" min="0" max="10" value="0" step="0.1" />
+        </section>
+
+        <section id="container">
+          <ul class="set">     
+            <li id="c3"  class="key white c"></li>
+            <li id="c#3" class="key black cs"></li>
+            <li id="d3"  class="key white d"></li>
+            <li id="d#3" class="key black ds"></li>
+            <li id="e3"  class="key white e"></li>
+            <li id="f3"  class="key white f"></li>
+            <li id="f#3" class="key black fs"></li>
+            <li id="g3"  class="key white g"></li>
+            <li id="g#3" class="key black gs"></li>
+            <li id="a3"  class="key white a"></li>
+            <li id="a#3" class="key black as"></li>
+            <li id="b3"  class="key white b"></li>
+            <li id="c4"  class="key white c"></li>
+            <li id="c#4" class="key black cs"></li>
+            <li id="d4"  class="key white d"></li>
+            <li id="d#4" class="key black ds"></li>
+            <li id="e4"  class="key white e"></li>
+            <li id="f4"  class="key white f"></li>
+            <li id="f#4" class="key black fs"></li>
+            <li id="g4"  class="key white g"></li>
+            <li id="g#4" class="key black gs"></li>
+            <li id="a4"  class="key white a"></li>
+            <li id="a#4" class="key black as"></li>
+            <li id="b4"  class="key white b"></li>
+          </ul>
+        </section>
     </main>
 
     <!-- <section id="modal">
@@ -389,6 +369,7 @@
     <script src="./node_modules/tone/build/Tone.js"></script>
     <script src="./javascript/sequencer.js"></script>
     <script src="./javascript/keyboard.js"></script>
+    <script src="./javascript/effects.js"></script>
     <script src="./javascript/app.js"></script>
 </body>
 </html>
