@@ -18,21 +18,13 @@
   --reddish: #ff764d;
 }
 
-body{
-  background-color: var(--black);
+body, html {
+  background: black;
+  background-blend-mode: screen;
+  color: white;
+  font-size: 14px;
+  height: 100%;
   font-family: "Mulish", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-#pad, #keyboard{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin: 20px;
 }
 
 h1{
@@ -60,39 +52,6 @@ p, label{
   font-size: 16px; line-height: 26px; 
   text-indent: 30px; 
   margin: 0; 
-}
-
-a{ 
-  min-height: 40px;
-  min-width: 40px;
-  color: var(--reddish);
-  border: 1px solid var(--reddish); 
-  border-radius: 5px;
-  text-decoration: none; 
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-a:hover, a:active{ 
-  color: #fff; 
-  border: 1px solid #fff; 
-}
-
-a.key{
-  background-color: var(--black);
-  height: 80px;
-  line-height: 100px;
-  box-shadow: 0px 3px 2px var(--white);
-  
-}
-
-a.key.minor{
-  background-color: var(--reddish);
-  color: var(--white);
-  max-height: 50px;
-  line-height:50px;
-  /* position:relative;
-  left: -10px; */
 }
 
 .sequencer-btn{
@@ -125,13 +84,8 @@ a.key.minor{
     transform: scale(1, 1);
  }
 }
-body, html {
-  background: black;
-  background-blend-mode: screen;
-  color: white;
-  font-size: 14px;
-  height: 100%;
-}
+
+
 #app {
   display: flex;
   align-items: center;
@@ -194,13 +148,8 @@ body, html {
 ul {
   height:18.875em;
   width: auto;
-  margin:5em auto;
   padding:3em 0 0 3em;
   position:relative;
-  border:1px solid #160801;
-  border-radius:1em;
-  background:linear-gradient(to bottom right,rgba(0,0,0,0.3),rgba(0,0,0,0)),url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/187/vwood.png);
-  box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5)
 }
 
 li {
